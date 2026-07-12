@@ -1,0 +1,12 @@
+body {
+  background: radial-gradient(circle, hsl(214, 47%, 23%), hsl(237, 48%, 15%));
+  color: white;
+  font-family:
+    "https://fonts.google.com/specimen/Barlow+Semi+Condensed", Arial, Helvetica,
+    sans-serif;
+}
+
+.app-wide-border {
+  border: 2px solid hsl(246, 11%, 37%);
+  border-radius: 1rem;
+}
