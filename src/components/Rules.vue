@@ -1,8 +1,9 @@
 <script lang="ts" setup>
-import { Teleport } from "vue";
-import { Mode, type TMode } from "../util.ts";
+import { computed, Teleport } from "vue";
+import { closeIconUrl, ruleImageUrls } from "../assets";
+import { type TMode } from "../util.ts";
 
-defineProps<{
+const props = defineProps<{
   mode: TMode;
   showRules: boolean;
 }>();
@@ -10,6 +11,8 @@ defineProps<{
 const emit = defineEmits<{
   "update:showRules": [value: boolean];
 }>();
+
+const rulesImageUrl = computed(() => ruleImageUrls[props.mode]);
 </script>
 
 <template>
@@ -25,14 +28,10 @@ const emit = defineEmits<{
       <div class="modal">
         <div class="header">
           <button @click="emit('update:showRules', false)" class="close-btn">
-            <img src="../../images/icon-close.svg" alt="" />
+            <img :src="closeIconUrl" alt="" />
           </button>
         </div>
-        <img
-          :src="`../../images/${mode === Mode.Basic ? 'image-rules' : 'image-rules-bonus'}.svg`"
-          alt=""
-          class="rule-body"
-        />
+        <img :src="rulesImageUrl" alt="" class="rule-body" />
       </div>
     </Teleport>
   </div>

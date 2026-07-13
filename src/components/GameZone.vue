@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { computed, type PropType } from "vue";
+import { moveIconUrls } from "../assets";
 import { Mode, type TMode, type TMove } from "../util";
 
 const props = defineProps({
@@ -31,7 +32,8 @@ const ImagesMap = computed(() => {
     if (!move) return [];
 
     return {
-      image: `icon-${move.name}`,
+      imageClass: `icon-${move.name}`,
+      imageUrl: moveIconUrls[move.name],
       move,
     };
   });
@@ -63,9 +65,12 @@ const ImagesMap = computed(() => {
       @click="emit('playedMove', moveInfo.move)"
     >
       <img
-        :src="`../../images/${moveInfo.image}.svg`"
+        :src="moveInfo.imageUrl"
         :alt="moveInfo.move.name"
-        :class="[`img-${moveInfo.image}`, { advanced: mode === Mode.Advanced }]"
+        :class="[
+          `img-${moveInfo.imageClass}`,
+          { advanced: mode === Mode.Advanced },
+        ]"
         class="image-container"
       />
     </div>

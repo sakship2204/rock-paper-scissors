@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { computed, type PropType } from "vue";
+import { moveIconUrls } from "../assets";
 import type { TMove } from "../util";
 
 const { playerMove, computerMove } = defineProps({
@@ -27,7 +28,7 @@ const result = computed(() => {
     <span class="move-container">
       <div>You picked</div>
       <img
-        :src="`../../images/icon-${playerMove?.name}.svg`"
+        :src="moveIconUrls[playerMove.name]"
         :class="playerMove ? `img-icon-${playerMove.name}` : ''"
       />
     </span>
@@ -39,7 +40,7 @@ const result = computed(() => {
     <span class="move-container">
       <div>The house picked</div>
       <img
-        :src="`../../images/icon-${computerMove?.name}.svg`"
+        :src="moveIconUrls[computerMove.name]"
         :class="computerMove ? `img-icon-${computerMove.name}` : ''"
       />
     </span>

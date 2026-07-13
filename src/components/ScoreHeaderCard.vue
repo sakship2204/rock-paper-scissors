@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed, type PropType } from "vue";
+import { logoUrls } from "../assets";
 import { Mode, type TMode } from "../util";
 
 const props = defineProps({
@@ -15,12 +16,7 @@ const props = defineProps({
 });
 
 const LogoImage = computed(() => {
-  switch (props.mode) {
-    case Mode.Advanced:
-      return "logo-bonus";
-    default:
-      return "logo";
-  }
+  return logoUrls[props.mode];
 });
 </script>
 
@@ -30,7 +26,7 @@ const LogoImage = computed(() => {
     :class="mode === Mode.Advanced && 'advanced'"
   >
     <span>
-      <img :src="`../../images/${LogoImage}.svg`" alt="" class="logo" />
+      <img :src="LogoImage" alt="" class="logo" />
     </span>
 
     <span class="score-card">
