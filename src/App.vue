@@ -93,14 +93,13 @@ const handlePlayerMoved = (move: TMove) => {
         playerMove = null;
         computerMove = null;
       "
-      class="min-height max-width"
+      class="min-height"
     />
     <GameZone
       :mode="currentMode"
       :moves="Moves"
       @playedMove="handlePlayerMoved"
       v-else
-      class="min-height max-width"
     />
 
     <Rules
@@ -122,12 +121,6 @@ const handlePlayerMoved = (move: TMove) => {
 @media (min-width: 450px) {
   .push-right {
     margin-left: auto;
-  }
-}
-
-@media (max-width: 450px) {
-  .max-width {
-    max-width: 400px;
   }
 }
 
