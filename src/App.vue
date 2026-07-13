@@ -118,7 +118,7 @@ const handlePlayerMoved = (move: TMove) => {
   gap: 2.5rem;
 }
 
-@media (min-width: 450px) {
+@media (min-width: 500px) {
   .push-right {
     margin-left: auto;
   }
