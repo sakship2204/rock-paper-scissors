@@ -1,5 +1,32 @@
-# Vue 3 + TypeScript + Vite
+# Frontend Mentor -rock-paper-scissors-game solution
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This is a solution to the [rock-paper-scissors-game challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH).
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## Overview
+
+### The challenge
+
+Build the rock-paper-scissors-game, didn't face any major challenge.
+
+### Screenshot
+
+### Links
+
+- Live Site URL: [rock-paper-scissors-game](https://sakship2204.github.io/ip-address-tracker-master/)
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- Vuejs
+- Vanilla CSS
+- Flexbox
+- Responsive styling
+
+### What I practiced
+
+Technical side:
+Vuejs coding
+Writing styles from scratch for modal, toggle etc.
+Maintaining data in the app component and passing to other via props
