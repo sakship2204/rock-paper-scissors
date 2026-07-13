@@ -10,6 +10,9 @@ Build the rock-paper-scissors-game, didn't face any major challenge.
 
 ### Screenshot
 
+<img width="869" height="450" alt="Screenshot 2026-07-13 at 2 38 54 PM" src="https://github.com/user-attachments/assets/081de1de-eb4f-448d-8351-01172614b8ca" />
+
+
 ### Links
 
 - Live Site URL: [rock-paper-scissors-game](https://sakship2204.github.io/ip-address-tracker-master/)
