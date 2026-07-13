@@ -49,6 +49,24 @@ const LogoImage = computed(() => {
   min-width: 40rem;
 }
 
+@media (max-width: 750px) and (min-width: 500px) {
+  .score-card-container {
+    min-width: 25rem;
+  }
+}
+
+@media (max-width: 500px) and (min-width: 380px) {
+  .score-card-container {
+    min-width: 20rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .score-card-container {
+    min-width: 17rem;
+  }
+}
+
 .logo {
   height: 6.5rem;
 }
