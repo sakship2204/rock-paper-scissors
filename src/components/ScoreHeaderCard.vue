@@ -14,12 +14,12 @@ const props = defineProps({
   },
 });
 
-const AvailableCards = computed(() => {
+const LogoImage = computed(() => {
   switch (props.mode) {
     case Mode.Advanced:
-      return ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
+      return "logo-bonus";
     default:
-      return ["Rock", "Paper", "Scissors"];
+      return "logo";
   }
 });
 </script>
@@ -30,9 +30,7 @@ const AvailableCards = computed(() => {
     :class="mode === Mode.Advanced && 'advanced'"
   >
     <span>
-      <div v-for="card in AvailableCards" :key="card" class="game-title">
-        {{ card.toUpperCase() }}
-      </div>
+      <img :src="`../../images/${LogoImage}.svg`" alt="" class="logo" />
     </span>
 
     <span class="score-card">
@@ -49,6 +47,10 @@ const AvailableCards = computed(() => {
   display: flex;
   justify-content: space-between;
   min-width: 40rem;
+}
+
+.logo {
+  height: 6.5rem;
 }
 
 .score-card-container.advanced .game-title {

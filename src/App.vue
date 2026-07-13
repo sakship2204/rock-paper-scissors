@@ -7,6 +7,7 @@ import { ref } from "vue";
 import { Mode } from "./util.ts";
 
 const currentScore = ref(0);
+const showRules = ref(false);
 
 const currentMode = ref(Mode.Basic);
 
@@ -17,7 +18,7 @@ const toggleMode = () => {
 </script>
 
 <template>
-  <div class="app-container">
+  <div class="app-container" :class="{ 'rules-open': showRules }">
     <AdvancedSelection
       :mode="currentMode"
       class="push-right"
@@ -27,7 +28,11 @@ const toggleMode = () => {
 
     <GameZone :mode="currentMode" />
 
-    <Rules :mode="currentMode" class="push-right" />
+    <Rules
+      v-model:showRules="showRules"
+      :mode="currentMode"
+      class="push-right"
+    />
   </div>
 </template>
 
@@ -36,10 +41,22 @@ const toggleMode = () => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3rem;
+  gap: 2.5rem;
 }
 
 .push-right {
   margin-left: auto;
+}
+
+.rules-open {
+  position: relative;
+}
+
+.rules-open::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-color: rgba(13, 4, 4, 0.5);
+  z-index: 10;
 }
 </style>
