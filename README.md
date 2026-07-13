@@ -15,7 +15,7 @@ Build the rock-paper-scissors-game, didn't face any major challenge.
 
 ### Links
 
-- Live Site URL: [rock-paper-scissors-game](https://sakship2204.github.io/ip-address-tracker-master/)
+- Live Site URL: [rock-paper-scissors-game](https://sakship2204.github.io/rock-paper-scissors/)
 
 ## My process
 
