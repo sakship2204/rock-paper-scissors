@@ -91,7 +91,7 @@ const ImagesMap = computed(() => {
 }
 
 .outer-container {
-  padding: 4rem;
+  padding: 6.5rem;
   position: relative;
 }
 
@@ -114,22 +114,22 @@ const ImagesMap = computed(() => {
 }
 
 .img-icon-paper {
-  left: 10px;
-  top: 10px;
+  left: 20px;
+  top: 15px;
 
   border-color: hsl(230, 89%, 62%);
 }
 
 .img-icon-scissors {
-  right: 12px;
-  top: 10px;
+  right: 45px;
+  top: 15px;
   border-color: hsl(39, 89%, 49%);
 }
 
 .img-icon-rock {
-  right: 50%;
+  right: 53%;
   transform: translateX(50%);
-  bottom: 30px;
+  bottom: 55px;
   border-color: hsl(349, 71%, 52%);
 }
 
@@ -147,7 +147,7 @@ const ImagesMap = computed(() => {
 }
 
 .img-icon-lizard.advanced {
-  bottom: 0;
+  bottom: 18px;
   left: 15%;
   border-color: hsl(261, 73%, 60%);
 }
@@ -159,9 +159,9 @@ const ImagesMap = computed(() => {
 }
 
 .img-icon-rock.advanced {
-  right: 30%;
+  right: 35%;
   transform: translateX(50%);
-  bottom: 0;
+  bottom: 19px;
 }
 
 .img-icon-paper:active {

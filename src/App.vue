@@ -118,7 +118,7 @@ const handlePlayerMoved = (move: TMove) => {
   gap: 2.5rem;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 520px) {
   .push-right {
     margin-left: auto;
   }
@@ -129,7 +129,7 @@ const handlePlayerMoved = (move: TMove) => {
 }
 
 .min-height {
-  min-height: 440px;
+  min-height: 520px;
 }
 
 .rules-open::before {
